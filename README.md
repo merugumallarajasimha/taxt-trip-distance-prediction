@@ -15,10 +15,10 @@ Predict the **trip distance in miles** for a taxi ride given pre-trip informatio
 
 | Model | RMSE |
 |-------|------|
-| CatBoost | Best individual model |
-| XGBoost | — |
-| LightGBM | — |
-| **Ensemble (Weighted Avg)** | **0.6349** ✅ |
+| CatBoost | **0.824679** Best individual model |
+| XGBoost | **0.850255**|
+| LightGBM | **0.839176** |
+| **Ensemble (Weighted Avg)** | **0.822632** ✅ |
 
 > Ensemble weights: **CatBoost (0.6) + XGBoost (0.2) + LightGBM (0.2)**
 
@@ -29,20 +29,23 @@ Predict the **trip distance in miles** for a taxi ride given pre-trip informatio
 ```
 taxi-trip-distance-prediction/
 │
-├── notebook.ipynb              # Full ML pipeline (EDA → Modeling → Ensemble)
-├── app.py                      # Streamlit deployment app
+├──ML Code/
+|    |-----notebook.ipynb              # Full ML pipeline (EDA → Modeling → Ensemble)
+|
+├── app(steamlit code)/
+|    |------ app.py                      # Streamlit deployment app
 │
-├── models/
-│   ├── catboost_model.pkl      # Saved CatBoost model
-│   ├── xgb_model.pkl           # Saved XGBoost model
-│   └── lgb_model.pkl           # Saved LightGBM model
+├── model files/
+│   |--- catboost_model.pkl      # Saved CatBoost model
+│   |--- xgb_model.pkl           # Saved XGBoost model
+│   |--- lgb_model.pkl           # Saved LightGBM model
 │
-├── data/
+├── raw data/
 │   ├── train.csv
 │   ├── test.csv
 │   └── submission.csv
 │
-└── requirements.txt
+
 ```
 
 ---
@@ -89,11 +92,6 @@ Ensemble RMSE: **0.6349**
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
-```bash
-pip install -r requirements.txt
-```
 
 ### Run the Streamlit App
 
@@ -158,6 +156,7 @@ This project was submitted to the **MachineHack Week 46 Hackathon — Taxi Trip 
 - **Evaluation Metric**: RMSE
 - **Level**: Intermediate
 - **Domain**: Regression / Transportation
+- **link:https://machinehack.com/hackathons/taxi_trip_distance_prediction_challenge
 
 ---
 
