@@ -86,7 +86,9 @@ ensemble_pred = 0.6 * cat_pred + 0.4 * xgb_pred + 0.0 * lgb_pred
 ```
 
 Ensemble RMSE: **0.7742**
-### 5.Train and validation score
+
+### 5.Train and Validation Score
+
 -Train RMSE: 0.6956514647529121
 -Validation RMSE: 0.7768563387059666
 
