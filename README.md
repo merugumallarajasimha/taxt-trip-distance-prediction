@@ -15,12 +15,12 @@ Predict the **trip distance in miles** for a taxi ride given pre-trip informatio
 
 | Model | RMSE |
 |-------|------|
-| CatBoost | **0.824679** Best individual model |
-| XGBoost | **0.850255**|
-| LightGBM | **0.839176** |
-| **Ensemble (Weighted Avg)** | **0.822632** ✅ |
+| CatBoost | **0.7768** Best individual model |
+| XGBoost | **0.7817**|
+| LightGBM | **0.7918** |
+| **Ensemble (Weighted Avg)** | **0.0.7742** ✅ |
 
-> Ensemble weights: **CatBoost (0.6) + XGBoost (0.2) + LightGBM (0.2)**
+> Ensemble weights: **CatBoost (0.6) + XGBoost (0.4) + LightGBM (0.0)**
 
 ---
 
@@ -66,6 +66,9 @@ taxi-trip-distance-prediction/
   - `passenger_count`
   - `traffic_level`
   - `haversine_distance`
+  - `rush_hour`
+  - `day_of_week`
+  - `avg_speed`
 
 ### 3. Model Building
 Trained three gradient boosting models:
@@ -79,12 +82,15 @@ Split strategy: **Train / Validation / Test**
 Combined model predictions using **weighted averaging**:
 
 ```python
-ensemble_pred = 0.6 * cat_pred + 0.2 * xgb_pred + 0.2 * lgb_pred
+ensemble_pred = 0.6 * cat_pred + 0.4 * xgb_pred + 0.0 * lgb_pred
 ```
 
-Ensemble RMSE: **0.6349**
+Ensemble RMSE: **0.7742**
+### 5.train and validation score(overfit/underfit)
+-Train RMSE: 0.6956514647529121
+-Validation RMSE: 0.7768563387059666
 
-### 5. Deployment
+### 6. Deployment
 - Models saved with `joblib`
 - Interactive **Streamlit** web app built for real-time predictions
 
