@@ -36,7 +36,7 @@ def is_rush_hour(hour):
     return 1 if hour in [8, 9, 17, 18, 19] else 0
 
 def avg_speed(dist):
-    return dist / 30  # approximate assumption (safe placeholder)
+    return dist / 30 
 
 
 if st.button("Predict Trip Distance"):
@@ -63,7 +63,7 @@ if st.button("Predict Trip Distance"):
         speed
     ]])
 
-    # Predictions
+    
     cat_pred = cat.predict(features)
     xgb_pred = xgb.predict(features)
     lgb_pred = lgb.predict(features)
