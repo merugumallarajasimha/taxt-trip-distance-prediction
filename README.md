@@ -59,7 +59,7 @@ taxi-trip-distance-prediction/
 - Computed `trip_duration` and other derived features
 
 ### 2. Feature Engineering
-- **Haversine Distance**: Calculated real-world distance between pickup and dropoff coordinates using the Haversine formula
+- **Haversine Distance**: Calculated real world distance between pickup and dropoff coordinates using the Haversine formula
 - Final selected features (7 out of 29):
   - `pickup_latitude`, `pickup_longitude`
   - `dropoff_latitude`, `dropoff_longitude`
@@ -72,7 +72,7 @@ taxi-trip-distance-prediction/
 
 ### 3. Model Building
 Trained three gradient boosting models:
-- **CatBoost** — best individual RMSE
+- **CatBoost**  : best individual RMSE
 - **XGBoost**
 - **LightGBM**
 
@@ -132,7 +132,7 @@ streamlit
 
 ## 📊 Haversine Distance Formula
 
-To capture the real-world geographic distance between pickup and dropoff points:
+To capture the real world geographic distance between pickup and dropoff points:
 
 ```python
 from math import radians, sin, cos, sqrt, atan2
@@ -153,13 +153,13 @@ def haversine(lat1, lon1, lat2, lon2):
 - Haversine distance was the **strongest predictor** of trip distance
 - CatBoost outperformed XGBoost and LightGBM individually
 - Ensemble learning provided a consistent improvement over any single model
-- Limiting to 7 user-friendly features simplified deployment without sacrificing accuracy
+- Limiting to 7 user friendly features simplified deployment without sacrificing accuracy
 
 ---
 
 ## 🏅 Hackathon
 
-This project was submitted to the **MachineHack Week 46 Hackathon — Taxi Trip Distance Prediction Challenge**.
+This project was submitted to the **MachineHack Week 46 Hackathon  Taxi Trip Distance Prediction Challenge**.
 
 - **Evaluation Metric**: RMSE
 - **Level**: Intermediate
