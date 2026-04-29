@@ -30,15 +30,15 @@ Predict the **trip distance in miles** for a taxi ride given pre-trip informatio
 taxi-trip-distance-prediction/
 │
 ├──Py Code/
-|    |-----notebook.ipynb              # Full ML pipeline (EDA → Modeling → Ensemble)
+|    |-----notebook.ipynb              
 |
 ├── app(steamlit code)/
-|    |------ app.py                      # Streamlit deployment app
+|    |------ app.py                      
 │
 ├── model files/
-│   |--- catboost_model.pkl      # Saved CatBoost model
-│   |--- xgb_model.pkl           # Saved XGBoost model
-│   |--- lgb_model.pkl           # Saved LightGBM model
+│   |--- catboost_model.pkl      
+│   |--- xgb_model.pkl           
+│   |--- lgb_model.pkl          
 │
 ├── raw data/
 │   ├── train.csv
