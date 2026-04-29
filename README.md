@@ -29,7 +29,7 @@ Predict the **trip distance in miles** for a taxi ride given pre-trip informatio
 ```
 taxi-trip-distance-prediction/
 │
-├──ML Code/
+├──Py Code/
 |    |-----notebook.ipynb              # Full ML pipeline (EDA → Modeling → Ensemble)
 |
 ├── app(steamlit code)/
